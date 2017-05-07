@@ -1,0 +1,1180 @@
+<!doctype html>
+
+
+
+  
+
+
+<html class="theme-next muse use-motion" lang="zh-Hans">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+
+
+
+
+  
+  
+  
+  
+
+  
+    
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+    
+    
+    <link href="//fonts.googleapis.com/css?family=Lato:300,300italic,400,400italic,700,700italic&subset=latin,latin-ext" rel="stylesheet" type="text/css">
+  
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=5.1.0" rel="stylesheet" type="text/css" />
+
+
+  <meta name="keywords" content="Hexo, NexT" />
+
+
+
+
+
+
+
+
+  <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?v=5.1.0" />
+
+
+
+
+
+
+<meta name="description" content="该网页提供2013-2016年蓝桥杯历届数据结构题目及实现方法.">
+<meta property="og:type" content="website">
+<meta property="og:title" content="数据结构(C语言实现)">
+<meta property="og:url" content="http://yoursite.com/page/6/index.html">
+<meta property="og:site_name" content="数据结构(C语言实现)">
+<meta property="og:description" content="该网页提供2013-2016年蓝桥杯历届数据结构题目及实现方法.">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="数据结构(C语言实现)">
+<meta name="twitter:description" content="该网页提供2013-2016年蓝桥杯历届数据结构题目及实现方法.">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Muse',
+    sidebar: {"position":"left","display":"post","offset":12,"offset_float":0,"b2t":false,"scrollpercent":false},
+    fancybox: true,
+    motion: true,
+    duoshuo: {
+      userId: '0',
+      author: '博主'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="http://yoursite.com/page/6/"/>
+
+
+
+
+
+  <title> 数据结构(C语言实现) </title>
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left 
+   page-home 
+ ">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/"  class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">数据结构(C语言实现)</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <p class="site-subtitle"></p>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
+            
+            首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-categories">
+          <a href="/categories" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-th"></i> <br />
+            
+            分类
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
+            
+            归档
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />
+            
+            标签
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-commonweal">
+          <a href="/404.html" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-heartbeat"></i> <br />
+            
+            公益404
+          </a>
+        </li>
+      
+
+      
+    </ul>
+  
+
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+  <section id="posts" class="posts-expand">
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/04/15/postOffice/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="AdrianYeung">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="数据结构(C语言实现)">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                
+                <a class="post-title-link" href="/2017/04/15/postOffice/" itemprop="url">
+                  邮局
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-04-15T16:40:41+08:00">
+                2017-04-15
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <p>C村住着n户村民，由于交通闭塞，C村的村民只能通过信件与外界交流。为了方便村民们发信，C村打算在C村建设k个邮局，<br>这样每户村民可以去离自己家最近的邮局发信。现在给出了m个备选的邮局，请从中选出k个来，使得村民到自己家最近的邮局的距离和最小。<br>其中两点之间的距离定义为两点之间的直线距离。</p>
+<p><strong>输入格式</strong><br>输入的第一行包含三个整数n, m, k，分别表示村民的户数、备选的邮局数和要建的邮局数。<br>接下来n行，每行两个整数x, y，依次表示每户村民家的坐标。<br>接下来m行，每行包含两个整数x, y，依次表示每个备选邮局的坐标。<br>在输入中，村民和村民、村民和邮局、邮局和邮局的坐标可能相同，但你应把它们看成不同的村民或邮局。</p>
+<p><strong>输出格式</strong><br>输出一行，包含k个整数，从小到大依次表示你选择的备选邮局编号。（备选邮局按输入顺序由1到m编号）</p>
+<p><strong>样例输入</strong><br>5&emsp;4&emsp;2<br>0&emsp;0<br>2&emsp;0<br>3&emsp;1<br>3&emsp;3<br>1&emsp;1<br>0&emsp;1<br>1&emsp;0<br>2&emsp;1<br>3&emsp;2</p>
+<p><strong>样例输出</strong><br>2&emsp;4</p>
+<p><strong>数据规模和约定</strong><br>对于30%的数据，1&lt;=n&lt;=10，1&lt;=m&lt;=10，1&lt;=k&lt;=5；<br>对于60%的数据，1&lt;=m&lt;=20；<br>对于100%的数据，1&lt;=n&lt;=50，1&lt;=m&lt;=25，1&lt;=k&lt;=10。</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div><div class="line">51</div><div class="line">52</div><div class="line">53</div><div class="line">54</div><div class="line">55</div><div class="line">56</div><div class="line">57</div><div class="line">58</div><div class="line">59</div><div class="line">60</div><div class="line">61</div><div class="line">62</div><div class="line">63</div><div class="line">64</div><div class="line">65</div><div class="line">66</div><div class="line">67</div><div class="line">68</div><div class="line">69</div><div class="line">70</div><div class="line">71</div><div class="line">72</div><div class="line">73</div><div class="line">74</div><div class="line">75</div><div class="line">76</div><div class="line">77</div><div class="line">78</div><div class="line">79</div><div class="line">80</div><div class="line">81</div><div class="line">82</div><div class="line">83</div><div class="line">84</div><div class="line">85</div><div class="line">86</div><div class="line">87</div><div class="line">88</div><div class="line">89</div><div class="line">90</div><div class="line">91</div><div class="line">92</div><div class="line">93</div><div class="line">94</div><div class="line">95</div><div class="line">96</div><div class="line">97</div><div class="line">98</div><div class="line">99</div><div class="line">100</div><div class="line">101</div><div class="line">102</div><div class="line">103</div></pre></td><td class="code"><pre><div class="line"><span class="comment">#include&lt;stdio.h&gt;</span></div><div class="line"><span class="comment">#include&lt;math.h&gt;</span></div><div class="line">struct</div><div class="line">&#123;</div><div class="line">    int x, y;</div><div class="line">&#125;pos[50];</div><div class="line"><span class="built_in">float</span> dis[25][50];</div><div class="line">int res[10];</div><div class="line"><span class="built_in">float</span> minn = 100000000;</div><div class="line">int n, m, k, i, j, f[50];</div><div class="line">void dfs(int step,int cnt,<span class="built_in">float</span> sum,int temp[],<span class="built_in">float</span> las_dis[])</div><div class="line">&#123;</div><div class="line">	<span class="keyword">if</span>(step == m || cnt == k)</div><div class="line">	&#123;</div><div class="line">		<span class="keyword">if</span>(cnt == k &amp;&amp; minn &gt; sum)</div><div class="line">		&#123;</div><div class="line">			minn = sum;</div><div class="line">			<span class="keyword">for</span>(i = 0;i &lt; k;i ++)</div><div class="line">				res[i] = temp[i];</div><div class="line">		&#125;</div><div class="line">		<span class="built_in">return</span>;</div><div class="line">	&#125;</div><div class="line">	<span class="keyword">else</span> <span class="keyword">if</span>(cnt == 0)</div><div class="line">	&#123;</div><div class="line">		<span class="built_in">float</span> w[50];</div><div class="line">		dfs(step+1,cnt,sum,temp,w);</div><div class="line">		temp[cnt] = step+1;</div><div class="line">		<span class="keyword">for</span>(i = 0;i &lt; n;i ++)</div><div class="line">		&#123;</div><div class="line">			sum += dis[step][i];</div><div class="line">			w[i] = dis[step][i];</div><div class="line">		&#125;</div><div class="line">		dfs(step+1,cnt+1,sum,temp,w);</div><div class="line">	&#125;</div><div class="line">	<span class="keyword">else</span> <span class="keyword">if</span>(m - step == k - cnt)</div><div class="line">	&#123;	</div><div class="line">		<span class="built_in">float</span> w[50];</div><div class="line">		<span class="keyword">for</span>(i = 0;i &lt; n;i ++)</div><div class="line">			w[i] = las_dis[i];</div><div class="line">		temp[cnt] = step+1;</div><div class="line">		<span class="keyword">for</span>(i = 0;i &lt; n;i ++)</div><div class="line">		&#123;</div><div class="line">			<span class="keyword">if</span>(w[i] &gt; dis[step][i])</div><div class="line">			&#123;</div><div class="line">				sum = sum - w[i] + dis[step][i];</div><div class="line">				w[i] = dis[step][i];</div><div class="line">			&#125;</div><div class="line">		&#125;</div><div class="line">		dfs(step+1,cnt+1,sum,temp,w);	</div><div class="line">	&#125;</div><div class="line">	<span class="keyword">else</span></div><div class="line">	&#123;</div><div class="line">		<span class="built_in">float</span> w[50];</div><div class="line">		<span class="keyword">for</span>(i = 0;i &lt; n;i ++)</div><div class="line">			w[i] = las_dis[i];</div><div class="line">		dfs(step+1,cnt,sum,temp,w);</div><div class="line">		<span class="keyword">if</span>(!f[step])</div><div class="line">		&#123;</div><div class="line">			temp[cnt] = step+1;</div><div class="line">			int flag = 0;</div><div class="line">			<span class="keyword">for</span>(i = 0;i &lt; n;i ++)</div><div class="line">			&#123;</div><div class="line">				<span class="keyword">if</span>(w[i] &gt; dis[step][i])</div><div class="line">				&#123;</div><div class="line">					sum = sum - w[i] + dis[step][i];</div><div class="line">					w[i] = dis[step][i];</div><div class="line">					flag = 1;</div><div class="line">				&#125;</div><div class="line">			&#125;</div><div class="line">			<span class="keyword">if</span>(flag)</div><div class="line">				dfs(step+1,cnt+1,sum,temp,w);</div><div class="line">			<span class="keyword">else</span></div><div class="line">				f[step] = 1;</div><div class="line">		&#125;</div><div class="line">	&#125;</div><div class="line">&#125;</div><div class="line">int <span class="function"><span class="title">main</span></span>()</div><div class="line">&#123;</div><div class="line">    int x, y;</div><div class="line">    scanf(<span class="string">"%d%d%d"</span>, &amp;n, &amp;m, &amp;k);</div><div class="line">    <span class="keyword">for</span>(i = 0;i &lt; n;i ++)</div><div class="line">    &#123;</div><div class="line">        scanf(<span class="string">"%d%d"</span>,&amp;pos[i].x,&amp;pos[i].y);</div><div class="line">    &#125;</div><div class="line">    <span class="keyword">for</span>(i = 0;i &lt; m;i ++)</div><div class="line">    &#123;</div><div class="line">        scanf(<span class="string">"%d%d"</span>, &amp;x, &amp;y);</div><div class="line">        <span class="keyword">for</span>(j = 0;j &lt; n;j ++)</div><div class="line">        &#123;</div><div class="line">			dis[i][j] = sqrt(pow(x - pos[j].x,2) + pow(y - pos[j].y,2));</div><div class="line">        &#125;</div><div class="line">    &#125;</div><div class="line">    int temp[25];</div><div class="line">	<span class="built_in">float</span> las_dis[50];</div><div class="line">    dfs(0,0,0,temp,las_dis);</div><div class="line">    <span class="built_in">printf</span>(<span class="string">"%d"</span>,res[0]);</div><div class="line">    <span class="keyword">for</span>(i = 1;i &lt; k;i ++)</div><div class="line">    &#123;</div><div class="line">    	<span class="built_in">printf</span>(<span class="string">" %d"</span>,res[i]);</div><div class="line">    &#125;</div><div class="line">    <span class="built_in">printf</span>(<span class="string">"\n"</span>);</div><div class="line">    <span class="built_in">return</span> 0;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+
+          
+        
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/04/15/pointsOfCandy/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="AdrianYeung">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="数据结构(C语言实现)">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                
+                <a class="post-title-link" href="/2017/04/15/pointsOfCandy/" itemprop="url">
+                  分糖果
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-04-15T16:40:41+08:00">
+                2017-04-15
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <p>有n个小朋友围坐成一圈。老师给每个小朋友随机发偶数个糖果，然后进行下面的游戏：<br>每个小朋友都把自己的糖果分一半给左手边的孩子。<br>一轮分糖后，拥有奇数颗糖的孩子由老师补给1个糖果，从而变成偶数。<br>反复进行这个游戏，直到所有小朋友的糖果数都相同为止。<br>你的任务是预测在已知的初始糖果情形下，老师一共需要补发多少个糖果。</p>
+<p><strong>输入格式</strong><br>程序首先读入一个整数N(2&lt;N&lt;100)，表示小朋友的人数。<br>接着是一行用空格分开的N个偶数（每个偶数不大于1000，不小于2）</p>
+<p><strong>输出格式</strong><br>要求程序输出一个整数，表示老师需要补发的糖果数。</p>
+<p><strong>样例输入</strong><br>3<br>2&emsp;2&emsp;4</p>
+<p><strong>样例输出</strong><br>4</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div><div class="line">51</div><div class="line">52</div></pre></td><td class="code"><pre><div class="line"><span class="comment">#include&lt;stdio.h&gt;</span></div><div class="line"></div><div class="line">int h[100100];</div><div class="line">int un[100100];</div><div class="line"></div><div class="line">int b[1000100];</div><div class="line">int reb[1000100];</div><div class="line"></div><div class="line">int Lowbit(int x)&#123;</div><div class="line">    <span class="built_in">return</span> x&amp;(x^(x-1));</div><div class="line">&#125;</div><div class="line"></div><div class="line">int sum(int bit[], int idx)&#123;</div><div class="line">	int ret = 0;</div><div class="line">	<span class="keyword">while</span>(idx &gt; 0)&#123;</div><div class="line">		ret += bit[idx];</div><div class="line">		idx -= Lowbit(idx);</div><div class="line">	&#125;</div><div class="line">	<span class="built_in">return</span> ret;</div><div class="line">&#125;</div><div class="line"></div><div class="line">void add(int bit[], int idx, int val)&#123;</div><div class="line">	<span class="keyword">while</span>(idx &lt; 1000100)&#123;</div><div class="line">		bit[idx] += val;</div><div class="line">		idx += Lowbit(idx);</div><div class="line">	&#125;</div><div class="line">&#125;</div><div class="line"></div><div class="line">long long uVal[100100];</div><div class="line"></div><div class="line">int main(void)&#123;</div><div class="line">	int n, i;</div><div class="line">	scanf(<span class="string">"%d"</span>, &amp;n);</div><div class="line">	uVal[0] = 0;</div><div class="line">	<span class="keyword">for</span>(i = 0; i &lt; n; i++)&#123;</div><div class="line">		scanf(<span class="string">"%d"</span>, &amp;h[i]);</div><div class="line">		h[i]++;</div><div class="line">		uVal[i + 1] = uVal[i] + i + 1;</div><div class="line">		</div><div class="line">		un[i] += i - sum(b, h[i]);</div><div class="line">		add(b, h[i], 1);</div><div class="line">	&#125;</div><div class="line">	long long ans = 0;</div><div class="line">	<span class="keyword">for</span>(i = n - 1; i &gt;= 0; i--)&#123;</div><div class="line">		un[i] += sum(reb, h[i] - 1);</div><div class="line">		add(reb, h[i], 1);</div><div class="line">		</div><div class="line">		ans += uVal[un[i]];</div><div class="line">	&#125;</div><div class="line">	<span class="built_in">printf</span>(<span class="string">"%I64d\n"</span>, ans);</div><div class="line">	<span class="built_in">return</span> 0;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+
+          
+        
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/04/15/selectTag/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="AdrianYeung">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="数据结构(C语言实现)">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                
+                <a class="post-title-link" href="/2017/04/15/selectTag/" itemprop="url">
+                  约数倍数选卡片
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-04-15T16:40:41+08:00">
+                2017-04-15
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/博弈论/" itemprop="url" rel="index">
+                    <span itemprop="name">博弈论</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <ul>
+<li>闲暇时，福尔摩斯和华生玩一个游戏：<br>　　在N张卡片上写有N个整数。两人轮流拿走一张卡片。要求下一个人拿的数字一定是前一个人拿的数字的约数或倍数。例如，某次福尔摩斯拿走的卡片上写着数字“6”，则接下来华生可以拿的数字包括：<br>　　1，2，3, 6，12，18，24 ….<br>　　当轮到某一方拿卡片时，没有满足要求的卡片可选，则该方为输方。<br>　　请你利用计算机的优势计算一下，在已知所有卡片上的数字和可选哪些数字的条件下，怎样选择才能保证必胜！<br>　　当选多个数字都可以必胜时，输出其中最小的数字。如果无论如何都会输，则输出-1。</li>
+</ul>
+<hr>
+<p><strong>输入格式</strong><br>输入数据为2行。第一行是若干空格分开的整数（每个整数介于1~100间），表示当前剩余的所有卡片。<br>第二行也是若干空格分开的整数，表示可以选的数字。当然，第二行的数字必须完全包含在第一行的数字中。\</p>
+<p><strong>输出格式</strong><br>程序则输出必胜的招法！！</p>
+<p><strong>样例输入</strong><br>2&emsp;3&emsp;6<br>3&emsp;6</p>
+<p><strong>样例输出</strong><br>3</p>
+<p><strong>样例输入</strong><br>1&emsp;2&emsp;2&emsp;3&emsp;3&emsp;4&emsp;5<br>3&emsp;4&emsp;5</p>
+<p><strong>样例输出</strong><br>4</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div><div class="line">51</div><div class="line">52</div><div class="line">53</div><div class="line">54</div><div class="line">55</div><div class="line">56</div><div class="line">57</div><div class="line">58</div><div class="line">59</div><div class="line">60</div><div class="line">61</div><div class="line">62</div><div class="line">63</div><div class="line">64</div><div class="line">65</div><div class="line">66</div><div class="line">67</div><div class="line">68</div><div class="line">69</div><div class="line">70</div><div class="line">71</div><div class="line">72</div><div class="line">73</div><div class="line">74</div><div class="line">75</div><div class="line">76</div><div class="line">77</div><div class="line">78</div><div class="line">79</div><div class="line">80</div><div class="line">81</div><div class="line">82</div></pre></td><td class="code"><pre><div class="line"><span class="comment">#include&lt;stdio.h&gt;</span></div><div class="line"><span class="comment">#include&lt;stdlib.h&gt;</span></div><div class="line"><span class="comment">#include&lt;string.h&gt;</span></div><div class="line">int cnt[101];</div><div class="line">int table[101][100];</div><div class="line">int end[101];</div><div class="line">int win(int hold)</div><div class="line">&#123;</div><div class="line">    int i,j;</div><div class="line">	<span class="keyword">for</span>(i=end[hold];i&gt;=0;i--)</div><div class="line">	&#123;</div><div class="line">	    j=table[hold][i];</div><div class="line">		<span class="keyword">if</span>(cnt[j]&gt;0)</div><div class="line">		&#123;</div><div class="line">			cnt[j]--;</div><div class="line">			<span class="keyword">if</span>(win(j))</div><div class="line">			&#123;</div><div class="line">				cnt[j]++;</div><div class="line">				<span class="built_in">return</span> 0;</div><div class="line">			&#125;</div><div class="line">			cnt[j]++;</div><div class="line">		&#125;</div><div class="line">	&#125;</div><div class="line">	<span class="built_in">return</span> 1;</div><div class="line">&#125;	</div><div class="line">int <span class="function"><span class="title">main</span></span>()</div><div class="line">&#123;</div><div class="line">    int temp,i,j,t;</div><div class="line">	memset(table,-1,sizeof(table));</div><div class="line">	scanf(<span class="string">"%d"</span>,&amp;temp);</div><div class="line">	cnt[temp]++;</div><div class="line">	<span class="keyword">while</span>(getchar()!=<span class="string">'\n'</span>)</div><div class="line">	&#123;</div><div class="line">	scanf(<span class="string">"%d"</span>,&amp;temp);</div><div class="line">	cnt[temp]++;		</div><div class="line">	&#125;</div><div class="line">	<span class="keyword">for</span>(i=1;i&lt;101;i++)</div><div class="line">	&#123;</div><div class="line">		<span class="keyword">if</span>(cnt[i]&gt;0)</div><div class="line">		&#123;</div><div class="line">			t=0;</div><div class="line">			<span class="keyword">for</span>(j=1;j&lt;=100;j++)</div><div class="line">			&#123;</div><div class="line">				<span class="keyword">if</span>(cnt[j]&gt;0&amp;&amp;(i%j==0||j%i==0))</div><div class="line">				&#123;</div><div class="line">					table[i][t]=j;</div><div class="line">					t++;</div><div class="line">				&#125;</div><div class="line">			&#125;</div><div class="line">			end[i]=t-1;</div><div class="line">		&#125;</div><div class="line">	&#125;</div><div class="line">	int save[101];</div><div class="line">    i=0;</div><div class="line">	<span class="keyword">do</span></div><div class="line">	&#123;</div><div class="line">		scanf(<span class="string">"%d"</span>,&amp;temp);</div><div class="line">		save[i]=temp;</div><div class="line">		i++;		</div><div class="line">	&#125;<span class="keyword">while</span>(getchar()!=<span class="string">'\n'</span>);</div><div class="line">	i--;</div><div class="line">	int flag=0;</div><div class="line">	int tempi=i;</div><div class="line">	i=0;</div><div class="line">	<span class="keyword">while</span>(i&lt;=tempi)</div><div class="line">	&#123;</div><div class="line">		cnt[save[i]]--;</div><div class="line">		<span class="keyword">if</span>(win(save[i]))</div><div class="line">		&#123;</div><div class="line">			flag=1;</div><div class="line">			<span class="built_in">break</span>;</div><div class="line">		&#125;</div><div class="line">		cnt[save[i]]++;	</div><div class="line">		i++;</div><div class="line">	&#125;</div><div class="line">	<span class="keyword">if</span>(flag==1)</div><div class="line">	<span class="built_in">printf</span>(<span class="string">"%d"</span>,save[i]);</div><div class="line">	<span class="keyword">else</span></div><div class="line">	puts(<span class="string">"-1"</span>);</div><div class="line">	system(<span class="string">"pause"</span>);</div><div class="line">	<span class="built_in">return</span> 0;	</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+          
+        
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/04/15/siPingFangHe/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="AdrianYeung">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="数据结构(C语言实现)">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                
+                <a class="post-title-link" href="/2017/04/15/siPingFangHe/" itemprop="url">
+                  四平方和
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-04-15T16:40:41+08:00">
+                2017-04-15
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <p>问题描述:四平方和定理，又称为拉格朗日定理：<br>每个正整数都可以表示为至多4个正整数的平方和。<br>如果把0包括进去，就正好可以表示为4个数的平方和。<br>比如：<br>5 = 0^2 + 0^2 + 1^2 + 2^2<br>7 = 1^2 + 1^2 + 1^2 + 2^2<br>（^符号表示乘方的意思）<br>对于一个给定的正整数，可能存在多种平方和的表示法。<br>要求你对4个数排序：<br>0 &lt;= a &lt;= b &lt;= c &lt;= d<br>并对所有的可能表示法按 a,b,c,d 为联合主键升序排列，最后输出第一个表示法<br>程序输入为一个正整数N (N&lt;5000000)<br>要求输出4个非负整数，按从小到大排序，中间用空格分开</p>
+<p>例如:<br><strong>样例输入</strong><br>5</p>
+<p><strong>样例输出</strong><br>0&emsp;0&emsp;1&emsp;2</p>
+<p>再例如:<br><strong>样例输入</strong><br>12</p>
+<p><strong>样例输出</strong><br>0&emsp;2&emsp;1&emsp;2</p>
+<p>再例如:<br><strong>样例输入</strong><br>773535<br><strong>样例输出</strong><br>1&emsp;1&emsp;267&emsp;838</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div></pre></td><td class="code"><pre><div class="line"><span class="comment">#include &lt;iostream&gt;  </span></div><div class="line"><span class="comment">#include &lt;cmath&gt;  </span></div><div class="line"><span class="comment">#include &lt;stdio.h&gt;  </span></div><div class="line">using namespace std;  </div><div class="line">  </div><div class="line">const int MAXN=5000005;  </div><div class="line">short power[MAXN]=&#123;0&#125;;  </div><div class="line">  </div><div class="line">void Solve(int n)  </div><div class="line">	&#123;  </div><div class="line">	    <span class="keyword">for</span>(int i=0;i*i&lt;=n;i++)  </div><div class="line">	    &#123;  </div><div class="line">	        <span class="keyword">for</span>(int j=0;j*j&lt;=n;j++)  </div><div class="line">	        &#123;  </div><div class="line">	            //如果下面的已经不能表示成两个数的平方和，跳过  </div><div class="line">	            <span class="keyword">if</span>(power[n-i*i-j*j]==0) <span class="built_in">continue</span>;  </div><div class="line">	            <span class="keyword">for</span>(int k=0;k*k&lt;=n;k++)  </div><div class="line">	            &#123;  </div><div class="line">	                int temp=n-i*i-j*j-k*k;  </div><div class="line">	                double x=sqrt((double)temp);  </div><div class="line">	                <span class="keyword">if</span>(x ==(int)x)  </div><div class="line">	                &#123;  </div><div class="line">	                    cout&lt;&lt;i&lt;&lt;<span class="string">" "</span>&lt;&lt;j&lt;&lt;<span class="string">" "</span>&lt;&lt;k&lt;&lt;<span class="string">" "</span>&lt;&lt;(int)x&lt;&lt;endl;  </div><div class="line">	                    <span class="built_in">return</span>;  </div><div class="line">	                &#125;  </div><div class="line">	            &#125;  </div><div class="line">	        &#125;  </div><div class="line">	    &#125;  </div><div class="line">	&#125;  </div><div class="line">	  </div><div class="line">	int <span class="function"><span class="title">main</span></span>()  </div><div class="line">	&#123;  </div><div class="line">	    int n;  </div><div class="line">	    //预处理  </div><div class="line">	    <span class="keyword">for</span>(int i=0;i*i&lt;=n;i++)  </div><div class="line">	        <span class="keyword">for</span>(int j=0;j*j&lt;=n;j++)  </div><div class="line">	            <span class="keyword">if</span>(i*i+j*j&lt;=n)  </div><div class="line">	                power[i*i+j*j]=1;  </div><div class="line">	    cin&gt;&gt;n;  </div><div class="line">	    Solve(n);  </div><div class="line">	    <span class="built_in">return</span> 0;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+          
+        
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/04/15/shouLianYangShi/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="AdrianYeung">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="数据结构(C语言实现)">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                
+                <a class="post-title-link" href="/2017/04/15/shouLianYangShi/" itemprop="url">
+                  手链样式
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-04-15T16:40:41+08:00">
+                2017-04-15
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <p>问题描述:小明有3颗红珊瑚，4颗白珊瑚，5颗黄玛瑙。他想用它们串成一圈作为手链，送给女朋友。<br>现在小明想知道：如果考虑手链可以随意转动或翻转，一共可以有多少不同的组合样式呢？</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div></pre></td><td class="code"><pre><div class="line"><span class="comment">#include &lt;iostream&gt;</span></div><div class="line"><span class="comment">#include &lt;algorithm&gt;</span></div><div class="line"><span class="comment">#include &lt;string&gt;</span></div><div class="line"><span class="comment">#include &lt;vector&gt;</span></div><div class="line">using namespace std;</div><div class="line"></div><div class="line">int <span class="function"><span class="title">main</span></span>()</div><div class="line">&#123;</div><div class="line">    vector&lt;string&gt; v;//存已经找到的</div><div class="line">    int sum = 0;</div><div class="line">    string str = <span class="string">"aaabbbbccccc"</span>;</div><div class="line">    <span class="keyword">do</span></div><div class="line">    &#123;</div><div class="line">        vector&lt;string&gt;::iterator it;</div><div class="line">        <span class="keyword">for</span>(it=v.begin(); it != v.end(); it++)</div><div class="line">        &#123;</div><div class="line">            //当寻找失败返回string::npos 值为4294967295</div><div class="line">            <span class="keyword">if</span>((*it).find(str, 0) != string::npos)</div><div class="line">            &#123;</div><div class="line">                <span class="built_in">break</span>;</div><div class="line">            &#125;</div><div class="line">        &#125;</div><div class="line">        <span class="keyword">if</span>( it != v.end() ) <span class="built_in">continue</span>;</div><div class="line">        string str2 = str + str;  //可以任意转动的缘故</div><div class="line">        v.push_back(str2);</div><div class="line">        reverse(str2.begin(), str2.end());  //可以任意翻转的缘故</div><div class="line">        v.push_back(str2);</div><div class="line">        sum ++;</div><div class="line">    &#125;</div><div class="line">    <span class="keyword">while</span>(next_permutation(str.begin(), str.end()));</div><div class="line">    cout &lt;&lt; sum ;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+
+          
+        
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+  </section>
+
+  
+  <nav class="pagination">
+    <a class="extend prev" rel="prev" href="/page/5/"><i class="fa fa-angle-left"></i></a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/5/">5</a><span class="page-number current">6</span><a class="page-number" href="/page/7/">7</a><a class="page-number" href="/page/8/">8</a><a class="extend next" rel="next" href="/page/7/"><i class="fa fa-angle-right"></i></a>
+  </nav>
+
+
+
+          </div>
+          
+
+
+          
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    <div class="sidebar-inner">
+
+      
+
+      
+
+      <section class="site-overview sidebar-panel sidebar-panel-active">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+          <img class="site-author-image" itemprop="image"
+               src="/images/avatar.gif"
+               alt="AdrianYeung" />
+          <p class="site-author-name" itemprop="name">AdrianYeung</p>
+           
+              <p class="site-description motion-element" itemprop="description">该网页提供2013-2016年蓝桥杯历届数据结构题目及实现方法.</p>
+          
+        </div>
+        <nav class="site-state motion-element">
+
+          
+            <div class="site-state-item site-state-posts">
+              <a href="/archives">
+                <span class="site-state-item-count">37</span>
+                <span class="site-state-item-name">日志</span>
+              </a>
+            </div>
+          
+
+          
+            
+            
+            <div class="site-state-item site-state-categories">
+              <a href="/categories/index.html">
+                <span class="site-state-item-count">14</span>
+                <span class="site-state-item-name">分类</span>
+              </a>
+            </div>
+          
+
+          
+            
+            
+            <div class="site-state-item site-state-tags">
+              <a href="/tags/index.html">
+                <span class="site-state-item-count">4</span>
+                <span class="site-state-item-name">标签</span>
+              </a>
+            </div>
+          
+
+        </nav>
+
+        
+
+        <div class="links-of-author motion-element">
+          
+        </div>
+
+        
+        
+
+        
+        
+
+        
+
+
+      </section>
+
+      
+
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright" >
+  
+  &copy; 
+  <span itemprop="copyrightYear">2017</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">AdrianYeung</span>
+</div>
+
+
+<div class="powered-by">
+  由 <a class="theme-link" href="https://hexo.io">Hexo</a> 强力驱动
+</div>
+
+<div class="theme-info">
+  主题 -
+  <a class="theme-link" href="https://github.com/iissnan/hexo-theme-next">
+    NexT.Muse
+  </a>
+</div>
+
+
+        
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+      </div>
+    
+
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+  
+  <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+
+  
+  <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+
+  
+  <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+
+  
+  <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.0"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.0"></script>
+
+
+
+  
+  
+
+  
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.0"></script>
+
+
+
+  
+
+
+  
+
+
+
+
+	
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+  
+
+  
+
+  
+
+  
+
+</body>
+</html>

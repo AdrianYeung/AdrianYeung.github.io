@@ -1,0 +1,1250 @@
+<!doctype html>
+
+
+
+  
+
+
+<html class="theme-next muse use-motion" lang="zh-Hans">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+
+
+
+
+  
+  
+  
+  
+
+  
+    
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+    
+    
+    <link href="//fonts.googleapis.com/css?family=Lato:300,300italic,400,400italic,700,700italic&subset=latin,latin-ext" rel="stylesheet" type="text/css">
+  
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=5.1.0" rel="stylesheet" type="text/css" />
+
+
+  <meta name="keywords" content="Hexo, NexT" />
+
+
+
+
+
+
+
+
+  <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?v=5.1.0" />
+
+
+
+
+
+
+<meta name="description" content="该网页提供2013-2016年蓝桥杯历届数据结构题目及实现方法.">
+<meta property="og:type" content="website">
+<meta property="og:title" content="数据结构(C语言实现)">
+<meta property="og:url" content="http://yoursite.com/page/2/index.html">
+<meta property="og:site_name" content="数据结构(C语言实现)">
+<meta property="og:description" content="该网页提供2013-2016年蓝桥杯历届数据结构题目及实现方法.">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="数据结构(C语言实现)">
+<meta name="twitter:description" content="该网页提供2013-2016年蓝桥杯历届数据结构题目及实现方法.">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Muse',
+    sidebar: {"position":"left","display":"post","offset":12,"offset_float":0,"b2t":false,"scrollpercent":false},
+    fancybox: true,
+    motion: true,
+    duoshuo: {
+      userId: '0',
+      author: '博主'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="http://yoursite.com/page/2/"/>
+
+
+
+
+
+  <title> 数据结构(C语言实现) </title>
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left 
+   page-home 
+ ">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/"  class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">数据结构(C语言实现)</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <p class="site-subtitle"></p>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
+            
+            首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-categories">
+          <a href="/categories" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-th"></i> <br />
+            
+            分类
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
+            
+            归档
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />
+            
+            标签
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-commonweal">
+          <a href="/404.html" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-heartbeat"></i> <br />
+            
+            公益404
+          </a>
+        </li>
+      
+
+      
+    </ul>
+  
+
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+  <section id="posts" class="posts-expand">
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/04/15/danger/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="AdrianYeung">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="数据结构(C语言实现)">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                
+                <a class="post-title-link" href="/2017/04/15/danger/" itemprop="url">
+                  危险系数
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-04-15T16:40:41+08:00">
+                2017-04-15
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/求割点数/" itemprop="url" rel="index">
+                    <span itemprop="name">求割点数</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <blockquote>
+<p>问题描述:求两点之间的割点个数，使用深度优先遍历即可。</p>
+</blockquote>
+<p>抗日战争时期，冀中平原的地道战曾发挥重要作用。<br>地道的多个站点间有通道连接，形成了庞大的网络。但也有隐患，当敌人发现了某个站点后，其它站点间可能因此会失去联系。<br>我们来定义一个危险系数DF(x,y)：<br>对于两个站点x和y (x != y), 如果能找到一个站点z，当z被敌人破坏后，x和y不连通，那么我们称z为关于x,y的关键点。相应的，对于任意一对站点x和y，危险系数DF(x,y)就表示为这两点之间的关键点个数。</p>
+<ul>
+<li>本题的任务是：已知网络结构，求两站点之间的危险系数。</li>
+</ul>
+<p><strong>输入格式</strong><br>输入数据第一行包含2个整数n(2 &lt;= n &lt;= 1000), m(0 &lt;= m &lt;= 2000),分别代表站点数，通道数。<br>接下来m行，每行两个整数 u,v (1 &lt;= u, v &lt;= n; u != v)代表一条通道。<br>最后1行，两个数u,v，代表询问两点之间的危险系数DF(u, v)。</p>
+<p><strong>输出格式</strong><br>一个整数，如果询问的两点不连通则输出-1。</p>
+<p><strong>样例输入</strong><br>7&emsp;6<br>1&emsp;3<br>2&emsp;3<br>3&emsp;4<br>3&emsp;5<br>4&emsp;5<br>5&emsp;6<br>1&emsp;6</p>
+<p><strong>样例输出</strong><br>2</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div><div class="line">51</div><div class="line">52</div><div class="line">53</div><div class="line">54</div><div class="line">55</div><div class="line">56</div><div class="line">57</div><div class="line">58</div><div class="line">59</div><div class="line">60</div><div class="line">61</div><div class="line">62</div><div class="line">63</div><div class="line">64</div><div class="line">65</div><div class="line">66</div><div class="line">67</div><div class="line">68</div><div class="line">69</div><div class="line">70</div><div class="line">71</div><div class="line">72</div><div class="line">73</div><div class="line">74</div><div class="line">75</div><div class="line">76</div><div class="line">77</div><div class="line">78</div><div class="line">79</div><div class="line">80</div><div class="line">81</div><div class="line">82</div><div class="line">83</div><div class="line">84</div><div class="line">85</div><div class="line">86</div><div class="line">87</div><div class="line">88</div><div class="line">89</div><div class="line">90</div><div class="line">91</div><div class="line">92</div></pre></td><td class="code"><pre><div class="line"><span class="comment">#include&lt;stdio.h&gt;</span></div><div class="line"><span class="comment">#include&lt;stdlib.h&gt;</span></div><div class="line">struct Node</div><div class="line">&#123;</div><div class="line">	int data;</div><div class="line">	struct Node *pNext;</div><div class="line">&#125;;</div><div class="line">struct Node tab[1001];</div><div class="line">int visit[1001]=&#123;0&#125;;</div><div class="line">int way[1001]=&#123;0&#125;;</div><div class="line">int count[1001]=&#123;0&#125;;</div><div class="line">int cnt=0;</div><div class="line">void Insert(int n,int x);</div><div class="line">void Init(int n);</div><div class="line">void dfs(int x,int y,int n);</div><div class="line">int fun(int n);</div><div class="line">int <span class="function"><span class="title">main</span></span>()</div><div class="line">&#123;</div><div class="line">	int x,y,n,m,u,v;</div><div class="line">	scanf(<span class="string">"%d%d"</span>,&amp;n,&amp;m);</div><div class="line">	Init(n);</div><div class="line">	<span class="keyword">while</span>(m--)</div><div class="line">	&#123;</div><div class="line">		scanf(<span class="string">"%d%d"</span>,&amp;u,&amp;v);</div><div class="line">		Insert(u,v);</div><div class="line">		Insert(v,u);</div><div class="line">	&#125;</div><div class="line">	scanf(<span class="string">"%d%d"</span>,&amp;x,&amp;y);</div><div class="line">	dfs(x,y,0);</div><div class="line">	int ret=fun(n);</div><div class="line">	<span class="built_in">printf</span>(<span class="string">"%d\n"</span>,ret);</div><div class="line">	<span class="built_in">return</span> 0;</div><div class="line">&#125;</div><div class="line">int fun(int n)</div><div class="line">&#123;</div><div class="line">	int i;</div><div class="line">	int ret=0;</div><div class="line">	<span class="keyword">for</span>(i=1;i&lt;=n;i++)</div><div class="line">	&#123;</div><div class="line">		<span class="keyword">if</span>(count[i]==cnt)</div><div class="line">		&#123;</div><div class="line">			ret++;</div><div class="line">		&#125;</div><div class="line">	&#125;</div><div class="line">	<span class="built_in">return</span> (ret-2);</div><div class="line">&#125;</div><div class="line">void dfs(int x,int y,int n)</div><div class="line">&#123;</div><div class="line">	visit[x]=1;</div><div class="line">	way[n]=x;</div><div class="line">	struct Node *p=&amp;tab[x];</div><div class="line">	<span class="keyword">if</span>(x==y)</div><div class="line">	&#123;</div><div class="line">		int i;</div><div class="line">		cnt++;</div><div class="line">		<span class="keyword">for</span>(i=0;i&lt;=n;i++)</div><div class="line">		&#123;</div><div class="line">			count[way[i]]++;</div><div class="line">		&#125;</div><div class="line">		<span class="built_in">return</span> ;</div><div class="line">	&#125;</div><div class="line">	<span class="keyword">while</span>((p=p-&gt;pNext)!=NULL)</div><div class="line">	&#123;</div><div class="line">		<span class="keyword">if</span>(visit[p-&gt;data]!=1)</div><div class="line">		&#123;</div><div class="line">			dfs(p-&gt;data,y,n+1);</div><div class="line">			visit[p-&gt;data]=0;</div><div class="line">		&#125;</div><div class="line">	&#125;</div><div class="line">&#125;</div><div class="line">void Init(int n)</div><div class="line">&#123;</div><div class="line">	int i;</div><div class="line">	<span class="keyword">for</span>(i=1;i&lt;=n;i++)</div><div class="line">	&#123;</div><div class="line">		tab[i].data=i;</div><div class="line">		tab[i].pNext=NULL;</div><div class="line">	&#125;</div><div class="line">&#125;</div><div class="line"></div><div class="line">void Insert(int n,int x)</div><div class="line">&#123;</div><div class="line">	struct Node *p=&amp;tab[n];</div><div class="line">	<span class="keyword">while</span>(p-&gt;pNext!=NULL)</div><div class="line">	&#123;</div><div class="line">		p=p-&gt;pNext;</div><div class="line">	&#125;</div><div class="line">	struct Node *new=(struct Node *)malloc(sizeof(struct Node));</div><div class="line">	p-&gt;pNext=new;</div><div class="line">	new-&gt;data=x;</div><div class="line">	new-&gt;pNext=NULL;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+          
+        
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/04/15/clipped/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="AdrianYeung">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="数据结构(C语言实现)">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                
+                <a class="post-title-link" href="/2017/04/15/clipped/" itemprop="url">
+                  剪格子
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-04-15T16:40:41+08:00">
+                2017-04-15
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/搜索/" itemprop="url" rel="index">
+                    <span itemprop="name">搜索</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <blockquote>
+<p>问题描述:搜索左上角的块包含哪些方格。当方格不连通或者在不要求连通的情况下不能得到解时回溯。</p>
+</blockquote>
+<ul>
+<li>如下图所示，3 x 3 的格子中填写了一些整数<br>+--*--+–+<br>|10* 1|52|<br>+--****--+<br>|20|30* 1|<br>*******--+<br>| 1| 2| 3|<br>+--+--+--+</li>
+</ul>
+<p>我们沿着图中的星号线剪开，得到两个部分，每个部分的数字和都是60。<br>本题的要求就是请你编程判定：对给定的m x n 的格子中的整数，是否可以分割为两个部分，使得这两个区域的数字和相等。<br>如果存在多种解答，请输出包含左上角格子的那个区域包含的格子的最小数目。<br>如果无法分割，则输出 0。</p>
+<p><strong>输入格式</strong><br>程序先读入两个整数 m n 用空格分割 (m,n&lt;10)。<br>表示表格的宽度和高度。<br>接下来是n行，每行m个正整数，用空格分开。每个整数不大于10000。</p>
+<p><strong>输出格式</strong><br>输出一个整数，表示在所有解中，包含左上角的分割区可能包含的最小的格子数目。</p>
+<p><strong>样例输入</strong><br>3&emsp;3<br>10&emsp;1&emsp;52<br>20&emsp;30&emsp;1<br>1&emsp;2&emsp;3</p>
+<p><strong>样例输出</strong><br>3</p>
+<p><strong>样例输入</strong><br>4&emsp;3<br>1&emsp;1&emsp;1&emsp;1<br>1&emsp;30&emsp;80&emsp;2<br>1&emsp;1&emsp;1&emsp;100</p>
+<p><strong>样例输出</strong><br>10</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div><div class="line">51</div><div class="line">52</div><div class="line">53</div><div class="line">54</div><div class="line">55</div><div class="line">56</div><div class="line">57</div><div class="line">58</div><div class="line">59</div><div class="line">60</div><div class="line">61</div><div class="line">62</div><div class="line">63</div><div class="line">64</div><div class="line">65</div><div class="line">66</div><div class="line">67</div><div class="line">68</div><div class="line">69</div><div class="line">70</div><div class="line">71</div><div class="line">72</div><div class="line">73</div><div class="line">74</div><div class="line">75</div><div class="line">76</div><div class="line">77</div><div class="line">78</div><div class="line">79</div><div class="line">80</div><div class="line">81</div><div class="line">82</div><div class="line">83</div><div class="line">84</div><div class="line">85</div><div class="line">86</div><div class="line">87</div><div class="line">88</div><div class="line">89</div><div class="line">90</div><div class="line">91</div><div class="line">92</div><div class="line">93</div><div class="line">94</div><div class="line">95</div><div class="line">96</div><div class="line">97</div><div class="line">98</div><div class="line">99</div><div class="line">100</div><div class="line">101</div><div class="line">102</div><div class="line">103</div><div class="line">104</div><div class="line">105</div><div class="line">106</div><div class="line">107</div><div class="line">108</div><div class="line">109</div><div class="line">110</div><div class="line">111</div><div class="line">112</div><div class="line">113</div><div class="line">114</div></pre></td><td class="code"><pre><div class="line"><span class="comment">#include &lt;stdio.h&gt;</span></div><div class="line"><span class="comment">#define N 10</span></div><div class="line">int num[N][N];</div><div class="line">int tag[N][N] = &#123;0&#125;;</div><div class="line">int m, n;</div><div class="line">int r = 100;</div><div class="line">int find(int i, int j, int t, int ntag[][N])</div><div class="line">&#123; </div><div class="line">    int count = 0;</div><div class="line">    <span class="keyword">if</span> (i &lt; 0 || i &gt;= n || j &lt; 0 || j &gt;= m || ntag[i][j] == 1)</div><div class="line">        <span class="built_in">return</span> 0; </div><div class="line">    ntag[i][j] = 1;</div><div class="line">    <span class="keyword">if</span> (tag[i][j] != t)</div><div class="line">        <span class="built_in">return</span> 0;</div><div class="line">    count++;</div><div class="line">    count += find(i - 1, j, t, ntag);</div><div class="line">    count += find(i + 1, j, t, ntag);</div><div class="line">    count += find(i, j - 1, t, ntag);</div><div class="line">    count += find(i, j + 1, t, ntag);</div><div class="line">    <span class="built_in">return</span> count;</div><div class="line">&#125;</div><div class="line"></div><div class="line">int <span class="function"><span class="title">isbad</span></span>()</div><div class="line">&#123;</div><div class="line">    int i, j, k = 0,ge2;</div><div class="line">    int t = tag[0][0];</div><div class="line">    int ntag1[N][N] = &#123;0&#125;;</div><div class="line">    int ntag2[N][N] = &#123;0&#125;;  </div><div class="line">    int ge1 = find(0, 0, t, ntag1);</div><div class="line">    <span class="keyword">for</span> (i = 0; i &lt; n; i++)</div><div class="line">    &#123;</div><div class="line">        <span class="keyword">for</span> (j = 0; j &lt; m; j++)</div><div class="line">        &#123;</div><div class="line">            <span class="keyword">if</span> (tag[i][j] != t)</div><div class="line">            &#123;</div><div class="line">                k = 1;</div><div class="line">                <span class="built_in">break</span>;</div><div class="line">            &#125;</div><div class="line">        &#125;</div><div class="line">        <span class="keyword">if</span> (k == 1)</div><div class="line">            <span class="built_in">break</span>; </div><div class="line">    &#125;</div><div class="line"></div><div class="line">    <span class="keyword">if</span> (i == n &amp;&amp; j == m)</div><div class="line">        <span class="built_in">return</span> 0;</div><div class="line">     ge2 = find(i, j, tag[i][j], ntag2);</div><div class="line"></div><div class="line">    <span class="built_in">return</span> ge1 + ge2 != m * n;</div><div class="line">&#125;</div><div class="line">int bad(int i, int j)</div><div class="line">&#123;</div><div class="line">   int b;</div><div class="line">	<span class="keyword">if</span> (i &lt; 0 || i &gt;= n || j &lt; 0 || j &gt;= m || tag[i][j] == 1)</div><div class="line">        <span class="built_in">return</span> 1;</div><div class="line"></div><div class="line">    tag[i][j] = 1; </div><div class="line">    b = isbad();  </div><div class="line">    tag[i][j] = 0;  </div><div class="line">    <span class="built_in">return</span> b;</div><div class="line">&#125;</div><div class="line"></div><div class="line">void go(int i, int j, int k, int count)</div><div class="line">&#123;</div><div class="line"></div><div class="line">    <span class="keyword">if</span> (bad(i, j) || count &lt; num[i][j])</div><div class="line">        <span class="built_in">return</span>;</div><div class="line">    k++;</div><div class="line"></div><div class="line">    <span class="keyword">if</span> (count == num[i][j])</div><div class="line">    &#123;</div><div class="line">        <span class="keyword">if</span> (r &gt; k)</div><div class="line">            r = k;</div><div class="line">        <span class="built_in">return</span>; </div><div class="line">    &#125;</div><div class="line"></div><div class="line"></div><div class="line">    tag[i][j] = 1;</div><div class="line">    count -= num[i][j];</div><div class="line">    go(i - 1, j, k, count); </div><div class="line">    go(i + 1, j, k, count);</div><div class="line">    go(i, j - 1, k, count); </div><div class="line">    go(i, j + 1, k, count);</div><div class="line">    tag[i][j] = 0;</div><div class="line">&#125;</div><div class="line"></div><div class="line">int <span class="function"><span class="title">main</span></span>()</div><div class="line">&#123;</div><div class="line"></div><div class="line">    int i, j;</div><div class="line">    int half = 0;</div><div class="line">	scanf(<span class="string">"%d %d"</span>, &amp;m, &amp;n);</div><div class="line">    <span class="keyword">for</span> (i = 0; i &lt; n; i++)</div><div class="line">        <span class="keyword">for</span> (j = 0; j &lt; m; j++)</div><div class="line">        &#123;</div><div class="line">            scanf(<span class="string">"%d"</span>, &amp;num[i][j]);</div><div class="line"></div><div class="line">            half += num[i][j];</div><div class="line">        &#125;</div><div class="line"></div><div class="line"></div><div class="line">    <span class="keyword">if</span> (half % 2 == 0 &amp;&amp; half &gt;= num[0][0] * 2)</div><div class="line">    &#123;</div><div class="line"></div><div class="line">        half /= 2;</div><div class="line">        go(0, 0, 0, half);</div><div class="line">    &#125;</div><div class="line"></div><div class="line">    <span class="keyword">if</span> (r == 100)</div><div class="line">        r = 0;</div><div class="line"></div><div class="line">    <span class="built_in">printf</span>(<span class="string">"%d"</span>, r);</div><div class="line"></div><div class="line">    <span class="built_in">return</span> 0;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+          
+        
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/04/15/fluctuationsInTheSequence/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="AdrianYeung">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="数据结构(C语言实现)">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                
+                <a class="post-title-link" href="/2017/04/15/fluctuationsInTheSequence/" itemprop="url">
+                  波动数列
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-04-15T16:40:41+08:00">
+                2017-04-15
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <p>观察这个数列：<br>1&emsp;3&emsp;0&emsp;2&emsp;-1&emsp;1&emsp;-2 …<br>这个数列中后一项总是比前一项增加2或者减少3。<br>栋栋对这种数列很好奇，他想知道长度为 n 和为 s 而且后一项总是比前一项增加a或者减少b的整数数列可能有多少种呢？</p>
+<p><strong>输入格式</strong><br>输入的第一行包含四个整数 n s a b，含义如前面说述。</p>
+<p><strong>输出格式</strong><br>输出一行，包含一个整数，表示满足条件的方案数。由于这个数很大，请输出方案数除以100000007的余数。</p>
+<p><strong>样例输入</strong><br>4&emsp;10&emsp;2&emsp;3</p>
+<p><strong>样例输出</strong><br>2</p>
+<p><strong>样例说明</strong><br>这两个数列分别是2 4 1 3和7 4 1 -2。</p>
+<p><strong>数据规模和约定</strong><br>对于10%的数据，1&lt;=n&lt;=5，0&lt;=s&lt;=5，1&lt;=a,b&lt;=5；<br>对于30%的数据，1&lt;=n&lt;=30，0&lt;=s&lt;=30，1&lt;=a,b&lt;=30；<br>对于50%的数据，1&lt;=n&lt;=50，0&lt;=s&lt;=50，1&lt;=a,b&lt;=50；<br>对于70%的数据，1&lt;=n&lt;=100，0&lt;=s&lt;=500，1&lt;=a, b&lt;=50；<br>对于100%的数据，1&lt;=n&lt;=1000，-1,000,000,000&lt;=s&lt;=1,000,000,000，1&lt;=a, b&lt;=1,000,000。</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div></pre></td><td class="code"><pre><div class="line"><span class="comment">#define mod 100000007</span></div><div class="line">int n,s,a,b,x[1001][1001],i,j,t;</div><div class="line"><span class="function"><span class="title">fun</span></span>()</div><div class="line">&#123;</div><div class="line">	<span class="keyword">while</span>(x[i+1][t]&gt;=mod)x[i+1][t]-=mod;</div><div class="line">&#125;</div><div class="line">int <span class="function"><span class="title">main</span></span>()</div><div class="line">&#123;</div><div class="line">	scanf(<span class="string">"%d%d%d%d"</span>,&amp;n,&amp;s,&amp;a,&amp;b);</div><div class="line">	b%=n;</div><div class="line">	b*=-1;</div><div class="line">	<span class="keyword">while</span>(b&lt;0)b+=n;</div><div class="line">	a%=n;</div><div class="line">	s%=n;</div><div class="line">	<span class="keyword">while</span>(s&lt;0)s+=n;</div><div class="line">	<span class="keyword">for</span>(i=0;i&lt;n;i++)</div><div class="line">		<span class="keyword">for</span>(j=0;j&lt;n;j++)</div><div class="line">			x[i][j]=0;</div><div class="line">	x[1][a]=x[1][b]=1;</div><div class="line">	<span class="keyword">for</span>(i=1;i&lt;n-1;i++)</div><div class="line">		<span class="keyword">for</span>(j=0;j&lt;n;j++)</div><div class="line">		&#123;</div><div class="line">			t=(j+a*(i+1))%n;</div><div class="line">			x[i+1][t]+=x[i][j];</div><div class="line">			fun();</div><div class="line">			t=(j+b*(i+1))%n;</div><div class="line">			<span class="keyword">if</span>(t&gt;=n)</div><div class="line">				t-=n;</div><div class="line">			x[i+1][t]+=x[i][j];</div><div class="line">			fun();</div><div class="line">		&#125;</div><div class="line">	<span class="built_in">printf</span>(<span class="string">"%d\n"</span>,x[n-1][s]);</div><div class="line">	<span class="built_in">return</span> 0;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+
+          
+        
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/04/15/jiaoHuanPiZi/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="AdrianYeung">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="数据结构(C语言实现)">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                
+                <a class="post-title-link" href="/2017/04/15/jiaoHuanPiZi/" itemprop="url">
+                  交换瓶子
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-04-15T16:40:41+08:00">
+                2017-04-15
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <p>问题描述:有N个瓶子，编号 1 ~ N，放在架子上。</p>
+<p>比如有5个瓶子：<br>2&emsp;1&emsp;3&emsp;5&emsp;4</p>
+<p>要求每次拿起2个瓶子，交换它们的位置。<br>经过若干次后，使得瓶子的序号为：<br>1&emsp;2&emsp;3&emsp;4&emsp;5</p>
+<p>对于这么简单的情况，显然，至少需要交换2次就可以复位。</p>
+<p>如果瓶子更多呢？你可以通过编程来解决。</p>
+<p><strong>输入格式</strong><br>第一行: 一个正整数N（N&lt;10000）, 表示瓶子的数目<br>第二行：N个正整数，用空格分开，表示瓶子目前的排列情况。</p>
+<p><strong>输出格式</strong><br>输出数据为一行一个正整数，表示至少交换多少次，才能完成排序。</p>
+<p>例如:<br><strong>样例输入</strong><br>5<br>3&emsp;1&emsp;2&emsp;5&emsp;4</p>
+<p><strong>样例输出</strong><br>3</p>
+<p><strong>样例输入</strong><br>5<br>5&emsp;4&emsp;3&emsp;2&emsp;1</p>
+<p><strong>样例输出</strong><br>2</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div></pre></td><td class="code"><pre><div class="line"><span class="comment">#include &lt;stdio.h&gt;  </span></div><div class="line"><span class="comment">#include &lt;math.h&gt;  </span></div><div class="line">int arr[10010];  </div><div class="line">int flag[10010];  </div><div class="line">int <span class="function"><span class="title">main</span></span>()  </div><div class="line">&#123;  </div><div class="line">    int ans = 0;  </div><div class="line">    int n,i;  </div><div class="line">    scanf(<span class="string">"%d"</span>,&amp;n);  </div><div class="line">	    <span class="keyword">for</span>(i = 1 ; i &lt;= n ; i ++) scanf(<span class="string">"%d"</span>,&amp;arr[i]);  </div><div class="line">	    <span class="keyword">for</span>(i = 1 ; i &lt;= n ; i ++ )flag[arr[i]] = i;  </div><div class="line">	    <span class="keyword">for</span>(i = 1 ; i &lt;= n ; i ++)  </div><div class="line">	    &#123;  </div><div class="line">	        <span class="keyword">if</span>( i != arr[i] )  </div><div class="line">	        &#123;  </div><div class="line">	            int x = arr[i];  </div><div class="line">	            arr[i] ^= arr[flag[i]] ^= arr[i] ^= arr[flag[i]];  </div><div class="line">	            flag[i] ^= flag[x] ^= flag[i] ^= flag[x];  </div><div class="line">	            ans ++;  </div><div class="line">	        &#125;  </div><div class="line">	    &#125;  </div><div class="line">	    <span class="built_in">printf</span>(<span class="string">"%d\n"</span>,ans);  </div><div class="line">	    <span class="built_in">return</span> 0;  </div><div class="line">	&#125;</div></pre></td></tr></table></figure>
+
+          
+        
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/04/15/horizontalPrintBinaryTree/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="AdrianYeung">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="数据结构(C语言实现)">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                
+                <a class="post-title-link" href="/2017/04/15/horizontalPrintBinaryTree/" itemprop="url">
+                  横向打印二叉树
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-04-15T16:40:41+08:00">
+                2017-04-15
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/排序二叉树/" itemprop="url" rel="index">
+                    <span itemprop="name">排序二叉树</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <blockquote>
+<p>问题描述:将输入建立一棵排序二叉树，然后按要求输出。</p>
+</blockquote>
+<p>二叉树可以用于排序。其原理很简单：对于一个排序二叉树添加新节点时，先与根节点比较，若小则交给左子树继续处理，否则交给右子树。<br>当遇到空子树时，则把该节点放入那个位置。</p>
+<ul>
+<li>比如，10 8 5 7 12 4 的输入顺序，应该建成二叉树如下图所示，其中.表示空白。<br>…|-12<br>10-|<br>…|-8-|<br>…….|…|-7<br>…….|-5-|<br>………..|-4</li>
+<li>本题目要求：根据已知的数字，建立排序二叉树，并在标准输出中横向打印该二叉树。<br><strong>输入格式</strong><br>输入数据为一行空格分开的N个整数。 N&lt;100，每个数字不超过10000。<br>输入数据中没有重复的数字。</li>
+</ul>
+<p><strong>输出格式</strong><br>输出该排序二叉树的横向表示。为了便于评卷程序比对空格的数目，请把空格用句点代替。</p>
+<p><strong>样例输入</strong><br>10&emsp;5&emsp;20</p>
+<p><strong>样例输出</strong><br>…|-20<br>10-|<br>…|-5</p>
+<p><strong>样例输入</strong><br>5&emsp;10&emsp;20&emsp;8&emsp;4&emsp;7</p>
+<p><strong>样例输出</strong><br>…….|-20<br>..|-10-|<br>..|….|-8-|<br>..|……..|-7<br>5-|<br>..|-4</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div><div class="line">51</div><div class="line">52</div><div class="line">53</div><div class="line">54</div><div class="line">55</div><div class="line">56</div><div class="line">57</div><div class="line">58</div><div class="line">59</div><div class="line">60</div><div class="line">61</div><div class="line">62</div><div class="line">63</div><div class="line">64</div><div class="line">65</div><div class="line">66</div><div class="line">67</div><div class="line">68</div><div class="line">69</div><div class="line">70</div><div class="line">71</div><div class="line">72</div><div class="line">73</div><div class="line">74</div><div class="line">75</div><div class="line">76</div><div class="line">77</div><div class="line">78</div><div class="line">79</div><div class="line">80</div><div class="line">81</div><div class="line">82</div><div class="line">83</div><div class="line">84</div><div class="line">85</div><div class="line">86</div><div class="line">87</div><div class="line">88</div><div class="line">89</div><div class="line">90</div><div class="line">91</div><div class="line">92</div><div class="line">93</div><div class="line">94</div><div class="line">95</div><div class="line">96</div><div class="line">97</div><div class="line">98</div><div class="line">99</div><div class="line">100</div><div class="line">101</div><div class="line">102</div><div class="line">103</div><div class="line">104</div><div class="line">105</div><div class="line">106</div><div class="line">107</div></pre></td><td class="code"><pre><div class="line"><span class="comment">#include&lt;stdio.h&gt;</span></div><div class="line"><span class="comment">#include&lt;stdlib.h&gt;</span></div><div class="line"><span class="comment">#include&lt;string.h&gt;</span></div><div class="line"></div><div class="line">typedef struct TNode</div><div class="line">&#123;</div><div class="line">	int key;</div><div class="line">	struct TNode *left;</div><div class="line">	struct TNode *right;</div><div class="line">&#125;TNode, *Tree;</div><div class="line"></div><div class="line">Tree insert(Tree root, Tree src)</div><div class="line">&#123;</div><div class="line">	<span class="keyword">if</span>(root == NULL)</div><div class="line">	&#123;</div><div class="line">		root = src;</div><div class="line">	&#125;</div><div class="line">	<span class="keyword">else</span> <span class="keyword">if</span>(src-&gt;key &gt; root-&gt;key)</div><div class="line">	&#123;</div><div class="line">		root-&gt;left = insert(root-&gt;left, src);</div><div class="line">	&#125;</div><div class="line">	<span class="keyword">else</span></div><div class="line">	&#123;</div><div class="line">		root-&gt;right = insert(root-&gt;right, src);</div><div class="line">	&#125;</div><div class="line">	<span class="built_in">return</span> root;</div><div class="line">&#125;</div><div class="line"></div><div class="line">char l[1000];</div><div class="line"></div><div class="line"><span class="comment">#define U 1</span></div><div class="line"><span class="comment">#define D 2</span></div><div class="line"><span class="comment">#define S ('.')</span></div><div class="line"></div><div class="line">void <span class="built_in">print</span>(Tree root, int s, int dir)</div><div class="line">&#123;</div><div class="line">	<span class="keyword">if</span>(root != NULL)</div><div class="line">	&#123;</div><div class="line">		int i;</div><div class="line">		char buf[10];</div><div class="line">		sprintf(buf, <span class="string">"|-%d-"</span>, root-&gt;key);</div><div class="line">		int len = strlen(buf);</div><div class="line">		<span class="keyword">for</span>(i = 0; i &lt; len; i++)</div><div class="line">		&#123;</div><div class="line">			l[s + i] = S;</div><div class="line">		&#125;</div><div class="line">		<span class="keyword">if</span>(dir == D)</div><div class="line">		&#123;</div><div class="line">			l[s] = <span class="string">'|'</span>;</div><div class="line">		&#125;</div><div class="line">		<span class="built_in">print</span>(root-&gt;left, s + len, U);</div><div class="line">		</div><div class="line">		l[s] = <span class="string">'\0'</span>;</div><div class="line">		<span class="keyword">if</span>(root-&gt;left == NULL &amp;&amp; root-&gt;right == NULL)</div><div class="line">		&#123;</div><div class="line">			buf[len - 1] = <span class="string">'\0'</span>;</div><div class="line">			<span class="built_in">printf</span>(<span class="string">"%s%s\n"</span>, l, buf);</div><div class="line">		&#125;</div><div class="line">		<span class="keyword">else</span></div><div class="line">		&#123;</div><div class="line">			<span class="built_in">printf</span>(<span class="string">"%s%s|\n"</span>, l, buf);</div><div class="line">		&#125;</div><div class="line">		l[s] = S;</div><div class="line">		</div><div class="line">		<span class="keyword">if</span>(dir == U)</div><div class="line">		&#123;</div><div class="line">			l[s] = <span class="string">'|'</span>;</div><div class="line">		&#125;</div><div class="line">		<span class="built_in">print</span>(root-&gt;right, s + len, D);</div><div class="line">		l[s] = S;</div><div class="line">	&#125;</div><div class="line">&#125;</div><div class="line"></div><div class="line">void <span class="built_in">print</span>Pre(Tree root, int s)</div><div class="line">&#123;</div><div class="line">	<span class="keyword">if</span>(root != NULL)</div><div class="line">	&#123;</div><div class="line">		int i;</div><div class="line">		char buf[10];</div><div class="line">		sprintf(buf, <span class="string">"%d-"</span>, root-&gt;key);</div><div class="line">		int len = strlen(buf);</div><div class="line">		<span class="keyword">for</span>(i = 0; i &lt; len; i++)</div><div class="line">		&#123;</div><div class="line">			l[s + i] = S;</div><div class="line">		&#125;</div><div class="line">		<span class="built_in">print</span>(root-&gt;left, s + len, U);</div><div class="line">		</div><div class="line">		<span class="built_in">printf</span>(<span class="string">"%s|\n"</span>, buf);</div><div class="line">		</div><div class="line">		<span class="built_in">print</span>(root-&gt;right, s + len, D);</div><div class="line">	&#125;</div><div class="line">&#125;</div><div class="line"></div><div class="line">int main(void)</div><div class="line">&#123;</div><div class="line">	int n;</div><div class="line">	Tree tree = NULL;</div><div class="line">	<span class="keyword">while</span>(scanf(<span class="string">"%d"</span>, &amp;n) &gt; 0)</div><div class="line">	&#123;</div><div class="line">		Tree neo = malloc(sizeof(TNode));</div><div class="line">		neo-&gt;key = n;</div><div class="line">		neo-&gt;left = neo-&gt;right = NULL;</div><div class="line">		tree = insert(tree, neo);</div><div class="line">	&#125;</div><div class="line">	<span class="built_in">print</span>Pre(tree, 0);</div><div class="line">	<span class="built_in">return</span> 0;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+          
+        
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+  </section>
+
+  
+  <nav class="pagination">
+    <a class="extend prev" rel="prev" href="/"><i class="fa fa-angle-left"></i></a><a class="page-number" href="/">1</a><span class="page-number current">2</span><a class="page-number" href="/page/3/">3</a><span class="space">&hellip;</span><a class="page-number" href="/page/8/">8</a><a class="extend next" rel="next" href="/page/3/"><i class="fa fa-angle-right"></i></a>
+  </nav>
+
+
+
+          </div>
+          
+
+
+          
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    <div class="sidebar-inner">
+
+      
+
+      
+
+      <section class="site-overview sidebar-panel sidebar-panel-active">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+          <img class="site-author-image" itemprop="image"
+               src="/images/avatar.gif"
+               alt="AdrianYeung" />
+          <p class="site-author-name" itemprop="name">AdrianYeung</p>
+           
+              <p class="site-description motion-element" itemprop="description">该网页提供2013-2016年蓝桥杯历届数据结构题目及实现方法.</p>
+          
+        </div>
+        <nav class="site-state motion-element">
+
+          
+            <div class="site-state-item site-state-posts">
+              <a href="/archives">
+                <span class="site-state-item-count">37</span>
+                <span class="site-state-item-name">日志</span>
+              </a>
+            </div>
+          
+
+          
+            
+            
+            <div class="site-state-item site-state-categories">
+              <a href="/categories/index.html">
+                <span class="site-state-item-count">14</span>
+                <span class="site-state-item-name">分类</span>
+              </a>
+            </div>
+          
+
+          
+            
+            
+            <div class="site-state-item site-state-tags">
+              <a href="/tags/index.html">
+                <span class="site-state-item-count">4</span>
+                <span class="site-state-item-name">标签</span>
+              </a>
+            </div>
+          
+
+        </nav>
+
+        
+
+        <div class="links-of-author motion-element">
+          
+        </div>
+
+        
+        
+
+        
+        
+
+        
+
+
+      </section>
+
+      
+
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright" >
+  
+  &copy; 
+  <span itemprop="copyrightYear">2017</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">AdrianYeung</span>
+</div>
+
+
+<div class="powered-by">
+  由 <a class="theme-link" href="https://hexo.io">Hexo</a> 强力驱动
+</div>
+
+<div class="theme-info">
+  主题 -
+  <a class="theme-link" href="https://github.com/iissnan/hexo-theme-next">
+    NexT.Muse
+  </a>
+</div>
+
+
+        
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+      </div>
+    
+
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+  
+  <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+
+  
+  <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+
+  
+  <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+
+  
+  <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.0"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.0"></script>
+
+
+
+  
+  
+
+  
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.0"></script>
+
+
+
+  
+
+
+  
+
+
+
+
+	
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+  
+
+  
+
+  
+
+  
+
+</body>
+</html>
